@@ -4,9 +4,8 @@
 ## Установка
 
 1. Клонируйте репозиторий:  
-   ```bash
-   git clone https://github.com/savplux/backpack_liquidation_limit
-   cd backpack_liquidation_limit
+git clone https://github.com/savplux/backpack_liquidation_limit
+cd backpack_liquidation_limit
    
 2. Создайте виртуальное окружение и установите зависимости:
 python -m venv venv
@@ -15,7 +14,6 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 
 3. Настройка
-
 Заполните # config.yaml поля своими API-ключами и параметрами (пример ниже).
 
 4. Запуск
