@@ -1,0 +1,98 @@
+# Main account configuration - where funds will return after liquidation
+main_account:
+  address: "__"
+
+# API credentials for the main account
+api:                      
+  key: "__"
+  secret: "__"
+
+symbol: "SOL_USDC_PERP"        # точное имя рынка
+initial_deposit: "1"           # USDC на цикл
+check_interval: 10             # сек
+
+# Trading pairs configuration
+pairs:
+  - short_account:
+      name: "__"
+      address: "__"
+      api_key: "__"
+      api_secret: "__"
+    long_account:
+      name: "__"
+      address: "__"
+      api_key: "__"
+      api_secret: "__"
+  - short_account:
+      name: "__"
+      address: "__"
+      api_key: "__"
+      api_secret: "__"
+    long_account:
+      name: "__"
+      address: "__"
+      api_key: "__"
+      api_secret: "__"
+  - short_account:
+      name: "__"
+      address: "__"
+      api_key: "__"
+      api_secret: "__"
+    long_account:
+      name: "__"
+      address: "__"
+      api_key: "__"
+      api_secret: "__"
+  - short_account:
+      name: "__"
+      address: "__"
+      api_key: "__"
+      api_secret: "__"
+    long_account:
+      name: "__"
+      address: "__"
+      api_key: "__"
+      api_secret: "__"
+  - short_account:
+      name: "__"
+      address: "__"
+      api_key: "__"
+      api_secret: "__"
+    long_account:
+      name: "__"
+      address: "__"
+      api_key: "__"
+      api_secret: "__"
+
+# сколько раз повторить выставление maker-ордера, прежде чем сдаться
+limit_order_retries: 60
+
+# смещение (%) от лучшего bid/ask для maker-ордера
+maker_offset:
+  long: 0.000125    # для первой (short) ордера: отступаем от bid на ___%
+  short: 0.000125   # для первой (long) ордера: отступаем от ask на ___%
+
+# сколько секунд ждать fill-таймаута для LIMIT-ордера
+limit_order_timeout: 30
+
+# offset (в той же валюте цены) для тейк-профита
+take_profit_offset:
+  long: 0.05      # например, для лонг-позиции TP = (liq_price_opposite + __ USDC)
+  short: -0.05    # для шорт-позиции TP = (liq_price_opposite - __ USDC)
+
+# сколько попыток свипа баланса делать в конце цикла
+sweep_attempts: 10
+
+# Общие задержки между действиями
+general_delay:
+  min: 5
+  max: 15
+
+# Плечо
+leverage: 50
+
+# Время ожидания между циклами в секундах
+cycle_wait_time: 10  # сек
+
+# максимальная задержка между запуском пар в секундах
+pair_start_delay_max: 120  
