@@ -335,7 +335,7 @@ def process_pair(pair_cfg: dict, cfg: dict) -> None:
                         logging.info(f"{short_acc_name}: Target position size: {target_short_size}")
                     
                     # If already reached target or close enough, consider it done
-                    if current_size >= target_short_size * 0.9:  # 90% filled is good enough
+                    if current_size >= target_short_size * 1:  # 100% filled is good enough
                         logging.info(f"{short_acc_name}: Position already {current_size}/{target_short_size} " +
                                      f"({current_size/target_short_size*100:.1f}%) filled - continuing")
                         break
